@@ -1,6 +1,7 @@
 name: py
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "30 11 * * *"    #runs at 11:30 UTC everyday
 
