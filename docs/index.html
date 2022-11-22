@@ -177,9 +177,18 @@
 		</div>
 	</div>
  
-		<div id="map">
-		<div id="observablehq-50344bd5"></div>
+	<div class="row">
+		<div class="col">
+			<div style="position: relative" class="container">
+				<div id="observablehq-map"></div>
+				<div style="position: absolute; bottom: 150px; right: 15px;" class="p-5">
+					<p>Wind Direction</p>
+				</div>
+				<div style="position: absolute; bottom: -30px; right: -30px" class='p-5' id="observablehq-compass"></div>
+			</div>
+			<div id="observablehq-brush" class="pt-2"></div>
 		</div>
+	</div>
 
 
 
@@ -187,7 +196,7 @@
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/5c55222585415239@32.js?v=3";
-new Runtime().module(define, Inspector.into("#observablehq-50344bd5"));
+	new Runtime().module(define, Inspector.into("#observablehq-map"));
 </script>
 	
   
