@@ -180,7 +180,7 @@
 	<div class="row">
 		<div class="col">
 			<div style="position: relative" class="container">
-				<div id="observablehq-map"></div>
+				<div id="observablehq-container"></div>
 				<div style="position: absolute; bottom: 150px; right: 15px;" class="p-5">
 					<p>Wind Direction</p>
 				</div>
@@ -192,11 +192,21 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/5c55222585415239@32.js?v=3";
-	new Runtime().module(define, Inspector.into("#observablehq-map"));
+	import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+	import define from "https://api.observablehq.com/d/e5057433bd482160@950.js?v=3";
+	new Runtime().module(define, name => {
+		if (name === "viewof basemap") return true;
+		if (name === "container") return new Inspector(document.querySelector("#observablehq-container"));
+		if (name === "map") return true;
+		if (name === "compass") return new Inspector(document.querySelector("#observablehq-compass"));
+		if (name === "brush") return new Inspector(document.querySelector("#observablehq-brush"));
+		if (name === "filter") return true;
+		if (name === "dirs") return true;
+		if (name === "geoData") return true;
+		if (name === "maplibregl") return true;
+	});
 </script>
 	
   
