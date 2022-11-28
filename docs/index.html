@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -24,16 +24,22 @@
           <li class="nav-item">
             <a class="nav-link" href="#analysis">Analysis</a>
           </li>
+			<li class="nav-item dropdown ms-auto">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Smell Something?
+				</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8">Report it with the iOS App</a></li>
+					<li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US">Report it with the Android App</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="https://smellmycity.org" target="_blank">Explore SmellMyCity</a></li>
+				</ul>
+			</li>
         </ul>
       </div>
     </div><!-- /.container -->
   </nav>
-  
- 
-  
-  
-  
-  
+
   
   <div class="container">
 
@@ -62,7 +68,6 @@
 		
 		</div>
 		<div class="col">
-		
 		<div id="quotes" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner bg-secondary bg-gradient text-light rounded-3 p-5">
 			
@@ -174,15 +179,14 @@
 				<span class="visually-hidden">Previous</span>
 			</button>
 		</div>
-		
 		</div>
 	</div>
  
-	<div class="row">
+	<div class="row" id="map">
 		<div class="col">
 			<div style="position: relative" class="container">
 				<div id="observablehq-container"></div>
-				<div style="position: absolute; bottom: 150px; right: 15px;" class="p-5">
+				<div style="position: absolute; bottom: 150px; right: 15px;" class="p	-5">
 					<p>Wind Direction</p>
 				</div>
 				<div style="position: absolute; bottom: -30px; right: -30px" class='p-5' id="observablehq-compass"></div>
@@ -253,13 +257,26 @@
 	<div class="row align-items-md-stretch pt-2">
 		<div class="col-md-12">
 			<div class="p-5 mb-6 bg-light border rounded-3">
-				<h1>Smell something? Say something!</h1>
-				<p>Contribute your own smell reports to the map using the SmellMyCity app.
-					Go to <a href="https://smellmycity.org" target="_blank">SmellMyCity</a> on your computer, or if you're on your phone,
-					click the link below to download the app or iOS or Android now!</p>
-				<div style="font-size: 4em; text-align: center;">
-					<a href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8" style="margin: 20px;"><i class="fa-brands fa-app-store-ios"></i></a>
-					<a href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US" style="margin: 20px;"><i class="fa-brands fa-google-play"></i></a>
+				<div class="row">
+					<h1>Smell something? Say something!</h1>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<p>Contribute your own smell reports to the map using the SmellMyCity app.
+							Go to <a href="https://smellmycity.org" target="_blank">SmellMyCity</a> on your computer, or
+							if you're on your phone,
+							click the link below to download the app or iOS or Android now!</p>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-primary btn-lg"
+								href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US">
+							Get the Android App <i class="fa-brands fa-google-play"></i></button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-primary btn-lg"
+								href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8">
+							Get the iOS App <i class="fa-brands fa-app-store-ios"></i></button>
+					</div>
 				</div>
 			</div>
 		</div>
