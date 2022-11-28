@@ -88,6 +88,7 @@
 
 body {
   margin: 0;
+  padding-top: 4em;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -616,6 +617,10 @@ progress {
 .figure-caption {
   font-size: 0.875em;
   color: #6c757d;
+}
+
+.row {
+  padding: 0.5em;
 }
 
 .container,
