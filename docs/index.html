@@ -4,7 +4,7 @@
   <title>Stinky 2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
   <script src="https://kit.fontawesome.com/342ac9e330.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -178,17 +178,36 @@
 		</div>
 	</div>
  
-		<div id="map">
-		<div id="observablehq-50344bd5"></div>
+	<div class="row">
+		<div class="col">
+			<div style="position: relative" class="container">
+				<div id="observablehq-container"></div>
+				<div style="position: absolute; bottom: 150px; right: 15px;" class="p-5">
+					<p>Wind Direction</p>
+				</div>
+				<div style="position: absolute; bottom: -30px; right: -30px" class='p-5' id="observablehq-compass"></div>
+			</div>
+			<div id="observablehq-brush" class="pt-2"></div>
 		</div>
+	</div>
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/5c55222585415239@32.js?v=3";
-new Runtime().module(define, Inspector.into("#observablehq-50344bd5"));
+	import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+	import define from "https://api.observablehq.com/d/e5057433bd482160@950.js?v=3";
+	new Runtime().module(define, name => {
+		if (name === "viewof basemap") return true;
+		if (name === "container") return new Inspector(document.querySelector("#observablehq-container"));
+		if (name === "map") return true;
+		if (name === "compass") return new Inspector(document.querySelector("#observablehq-compass"));
+		if (name === "brush") return new Inspector(document.querySelector("#observablehq-brush"));
+		if (name === "filter") return true;
+		if (name === "dirs") return true;
+		if (name === "geoData") return true;
+		if (name === "maplibregl") return true;
+	});
 </script>
 	
   
