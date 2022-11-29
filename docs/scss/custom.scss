@@ -1,5 +1,11 @@
 // Custom.scss
-// Option A: Include all of Bootstrap
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+
+div.row {
+    scroll-margin-top: $nav-link-height + $spacer;
+}
 
 // Include any default variable overrides here (though functions won't be available)
 
