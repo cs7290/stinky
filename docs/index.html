@@ -194,29 +194,6 @@
 			<div id="observablehq-brush" class="pt-2"></div>
 		</div>
 	</div>
-
-
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-	<script type="module">
-		import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-		import notebook from "https://api.observablehq.com/d/e5057433bd482160@950.js?v=3";
-		const renders = {
-			"container": "#observablehq-container",
-			"compass": "#observablehq-compass",
-			"brush": "#observablehq-brush"
-		};
-		const runtime = new Runtime();
-		const main = runtime.module(notebook, name => {
-			const selector = renders[name];
-			if (selector) {
-				return new Inspector(document.querySelector(selector))
-			} else {
-				return true;
-			};
-		});
-	</script>
-	
   
 		<p>The compass allows you to pick the wind direction. 
 		Then the map will update only showing the data from when the wind is going in that direction.</p>
@@ -286,4 +263,24 @@
 	</div>
   </div>
 </body>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+	import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+	import notebook from "https://api.observablehq.com/d/e5057433bd482160@950.js?v=3";
+	const renders = {
+		"container": "#observablehq-container",
+		"compass": "#observablehq-compass",
+		"brush": "#observablehq-brush"
+	};
+	const runtime = new Runtime();
+	const main = runtime.module(notebook, name => {
+		const selector = renders[name];
+		if (selector) {
+			return new Inspector(document.querySelector(selector))
+		} else {
+			return true;
+		};
+	});
+</script>
 </html>
