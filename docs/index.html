@@ -209,6 +209,19 @@
         </div><!-- End Carousel Column -->
     </div><!-- End Overview Row -->
 
+    <div class="row justify-content-start" id="flyTo">
+        <h6>Zoom Map To: </h6>
+        <div class="col-4">
+            <div id="observablehq-flyToHtmlSelect"></div>
+        </div>
+        <div class="col-4">
+            <div id="observablehq-animateBtn"></div>
+        </div>
+        <div class="col-4">
+            <div id="observablehq-selectAllBtn"></div>
+        </div>
+    </div>
+
 	<div class="row" id="map"><!-- Map Row -->
 		<div class="col-12 pt-2">
 			<div style="position: relative" class="container bg-light rounded">
@@ -222,11 +235,7 @@
 	</div><!-- End Map Row -->
 
 	<div class="row"><!-- Brush and Buttons Row -->
-		<div class="col-10"><div id="observablehq-brush" class="pt-2"></div></div>
-		<div class="col-2 d-grid gap-2 p-3">
-			<div id="observablehq-animateBtn"></div>
-			<div id="observablehq-selectAllBtn"></div>
-		</div>
+		<div class="col"><div id="observablehq-brush" class="pt-2"></div></div>
 	</div><!-- End Brush and Buttons Row -->
 
     <div class="row p-3"> <!-- Chart Help Row -->
@@ -248,7 +257,7 @@
             <p>Throughout thousands of complaints, several descriptions of the local smells are repeated often:
                 "petroleum", "tar", "oil", "asphalt", "sulfur", "gas". Hundreds of the complaints also mention feeling
                 nausea, throat irritation, and headaches.</p>
-            <div id="wordFrequencyChart"></div>
+            <div id="observable-wordFrequencyChart"></div>
         </div>
     </div><!-- End What does it smell like Row -->
 
@@ -323,19 +332,21 @@
 </body>
 
 <script type="module">
-	import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-	import notebook from "https://api.observablehq.com/d/e5057433bd482160@1187.js?v=3";
-	const renders = {
-		"container": "#observablehq-container",
-		"compass": "#observablehq-compass",
-		"brush": "#observablehq-brush",
-		"selectAllBtn": "#observablehq-selectAllBtn",
-		"animateBtn": "#observablehq-animateBtn"
-	};
-	const runtime = new Runtime();
-	const main = runtime.module(notebook, name => {
-		const selector = renders[name];
-		return selector ? new Inspector(document.querySelector(selector)) : true;
-	});
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1290.js?v=3";
+    const renders = {
+        "container": "#observablehq-container",
+        "compass": "#observablehq-compass",
+        "brush": "#observablehq-brush",
+        "selectAllBtn": "#observablehq-selectAllBtn",
+        "animateBtn": "#observablehq-animateBtn",
+        "whatSmellChart": "#observable-wordFrequencyChart",
+        "flyToHtmlSelect": "#observablehq-flyToHtmlSelect",
+    };
+    const runtime = new Runtime();
+    const main = runtime.module(notebook, name => {
+        const selector = renders[name];
+        return selector ? new Inspector(document.querySelector(selector)) : true;
+    });
 </script>
 </html>
