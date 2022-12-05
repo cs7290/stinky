@@ -201,17 +201,24 @@
 	</div>
  
 	<div class="row" id="map">
-		<div class="col">
-			<div style="position: relative" class="container">
+		<div class="col-12 pt-2">
+			<div style="position: relative" class="container bg-light rounded">
 				<div id="observablehq-container"></div>
-				<div style="position: absolute; bottom: 150px; right: 15px;" class="p-5">
-					<p>Wind Direction</p>
+				<div style="position: absolute; bottom: 0px; right: 0px" class='col-2 bg-light bg-opacity-50 rounded'>
+					<p class="text-md-center">Wind Direction</p>
+					<div id="observablehq-compass"></div>
 				</div>
-				<div style="position: absolute; bottom: -30px; right: -30px" class='p-5' id="observablehq-compass"></div>
 			</div>
-			<div id="observablehq-brush" class="pt-2"></div>
 		</div>
 	</div>
+
+  <div class="row">
+	<div class="col-10"><div id="observablehq-brush" class="pt-2"></div></div>
+	<div class="col-2 d-grid gap-2 p-3">
+		<div id="observablehq-animateBtn"></div>
+		<div id="observablehq-selectAllBtn"></div>
+	</div>
+  </div>
   
 		<p>The compass allows you to pick the wind direction. 
 		Then the map will update only showing the data from when the wind is going in that direction.</p>
@@ -284,20 +291,18 @@
 
 <script type="module">
 	import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-	import notebook from "https://api.observablehq.com/d/e5057433bd482160@1118.js?v=3";
+	import notebook from "https://api.observablehq.com/d/e5057433bd482160@1187.js?v=3";
 	const renders = {
 		"container": "#observablehq-container",
 		"compass": "#observablehq-compass",
-		"brush": "#observablehq-brush"
+		"brush": "#observablehq-brush",
+		"selectAllBtn": "#observablehq-selectAllBtn",
+		"animateBtn": "#observablehq-animateBtn"
 	};
 	const runtime = new Runtime();
 	const main = runtime.module(notebook, name => {
 		const selector = renders[name];
-		if (selector) {
-			return new Inspector(document.querySelector(selector))
-		} else {
-			return true;
-		};
+		return selector ? new Inspector(document.querySelector(selector)) : true;
 	});
 </script>
 </html>
