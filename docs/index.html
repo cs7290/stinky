@@ -1,206 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Stinky 2</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-	<script src="https://kit.fontawesome.com/342ac9e330.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Stinky 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script src="https://kit.fontawesome.com/342ac9e330.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md navbar-light sticky-top bg-light">
-		<div class="container">
-			<a class="navbar-brand" href="#">Home</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav me-auto mb-2 mb-md-0">
-					<li class="nav-item">
-						<a class="nav-link" href="#map">Map</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#analysis">Analysis</a>
-					</li>
-					<li class="nav-item dropdown ms-auto">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Smell Something?
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<a class="dropdown-item" href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8" target="_blank">Report it with the iOS App</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US" target="_blank">Report it with the Android App</a>
-							</li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li>
-								<a class="dropdown-item" href="https://smellmycity.org" target="_blank">Explore SmellMyCity</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="navbar-nav ms-auto mb-2 mb-md-0 justify-content-end">
-					<li class="nav-item">
-						<a class="nav-link fa-brands fa-github fs-3" href="https://github.com/cs7290/stinky" target="_blank"></a>
-					</li>
-				</ul>
-			</div><!-- /.collapsible navbar -->
-		</div><!-- /.container -->
-	</nav>
+<nav class="navbar navbar-expand-md navbar-light sticky-top bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#map">Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#analysis">Analysis</a>
+                </li>
+                <li class="nav-item dropdown ms-auto">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+					   data-bs-toggle="dropdown" aria-expanded="false">
+                        Smell Something?
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" target="_blank"
+                               href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8">
+								Report it with the iOS App
+							</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" target="_blank"
+                               href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity">
+                               Report it with the Android App
+							</a>}
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://smellmycity.org" target="_blank">
+								Explore SmellMyCity
+							</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0 justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link fa-brands fa-github fs-3" href="https://github.com/cs7290/stinky"
+                       target="_blank"></a>
+                </li>
+            </ul>
+        </div><!-- /.collapsible navbar -->
+    </div><!-- /.container -->
+</nav>
 
-  
-  <div class="container">
+<div class="container">
 
-    <div class="row pt-3">
-      <div class="col">
-        <div class="p-5 bg-light rounded-3 border">
-          <h1 class="display-5 fw-bold">Noticed an industrial odor near South Portland?</h1>
-          <p class="fs-4">South Portland and Portland have been tracking these smell complaints since 2019. If you've been
-          smelling something, you're not alone.
-        </p></div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-	
-	
+    <div class="row pt-3"><!-- Intro Row -->
+        <div class="col">
+            <div class="p-5 bg-light rounded-3 border">
+                <h1 class="display-5 fw-bold">Noticed an industrial odor near South Portland?</h1>
+                <p class="fs-4">South Portland and Portland have been tracking these smell complaints since 2019. If
+                    you've been smelling something, you're not alone.
+                </p></div>
+        </div><!-- /.col -->
+    </div><!-- End Intro Row -->
 
-	<div class="row p-5">
-		<div class="col-sm">
-		
-		<h2>Strong Industrial Odors</h2>
-          <p>Residents in South Portland and Portland have often described strong neighborhood odors for years. These
-          smells were frequently described as industrial in nature; given the large oil storage tanks nearby, local and
-          state governments have been working to gauge the severity of the problem.</p>
-          <p>
-            These cities have tracked thousands online smell complaints for this issue, logging the date, location, odor
-            descriptions, and personal symptoms. You can visually explore this data for yourself below.</p>
-		
-		</div>
-		<div class="col-sm">
-		<!-- Note: The style is set to height: 90% so that the carousel will match the height of the column above.
-			    This keeps the carousel from changing sizes as the amount of text changes on each slide. This will
-			    not work if there is more text in thr carousel than in the div above. This also does not work when
-			    bootstrap moves to small screen mode. -->
-		<div id="quotes" class="carousel slide carousel-dark" data-bs-ride="carousel" style="height: 90%">
-			<div class="carousel-inner bg-light bg-gradient text-secondary rounded-3 p-5" style="height: 90%">
-			
-				<div class="carousel-item active text-center">
-				<blockquote class="blockquote">
-				  <p>Imagine you buy a house in south Portland and smell gas fumes everyday.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
+    <div class="row p-5"><!-- Overview Row -->
+        <div class="col-sm">
+            <h2>Strong Industrial Odors</h2>
+            <p>Residents in South Portland and Portland have often described strong neighborhood odors for years. These
+                smells were frequently described as industrial in nature; given the large oil storage tanks nearby,
+                local and state governments have been working to gauge the severity of the problem.</p>
+            <p>These cities have tracked thousands online smell complaints for this issue, logging the date, location,
+                odor descriptions, and personal symptoms. You can visually explore this data for yourself below.</p>
+        </div>
+        <div class="col-sm"><!-- Carousel Column -->
+            <!-- Note: The style is set to height: 90% so that the carousel will match the height of the column above.
+                    This keeps the carousel from changing sizes as the amount of text changes on each slide. This will
+                    not work if there is more text in thr carousel than in the div above. This also does not work when
+                    bootstrap moves to small screen mode. -->
+            <div id="quotes" class="carousel slide carousel-dark" data-bs-ride="carousel" style="height: 90%">
+                <div class="carousel-inner bg-light bg-gradient text-secondary rounded-3 p-5" style="height: 90%">
 
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>Would be pretty cool if the city of south portland prioritized the health of it's citizens</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>I have to go inside because the air smells terrible.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>This happens at night and runs off into the morning. Woke us up even with our windows closed.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>The smell of gas was very strong last night in the cash corner area.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>Smelled strong oil on outer Broadway near the greater Portland Christian school.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>I noticed this smell again several times this week. The odor seems stronger this week than it has been in the past. I cannot be outside.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>Very irritating overwhelming. Occurred on veterans bridge at 9 PM last night next to Sprague oil tanks.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>Started about an hour ago. Windy day but the smell has been persistent.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>I live in the West End. Many days this summer the odor has been very unpleasant. It feels toxic.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-				
-				<div class="carousel-item text-center">
-				<blockquote class="blockquote">
-				  <p>Criminal this is still happening all years. Authorities let it go on...and....on.</p>
-				</blockquote>
-				<figcaption class="blockquote-footer">
-				  <cite>Portland resident</cite>
-				</figcaption>
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#quotes" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#quotes" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-		</div>
-		</div>
-	</div>
- 
-	<div class="row" id="map">
+                    <div class="carousel-item active text-center">
+                        <blockquote class="blockquote">
+                            <p>Imagine you buy a house in south Portland and smell gas fumes everyday.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>Would be pretty cool if the city of south portland prioritized the health of it's
+                                citizens</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>I have to go inside because the air smells terrible.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>This happens at night and runs off into the morning. Woke us up even with our windows
+                                closed.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>The smell of gas was very strong last night in the cash corner area.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>Smelled strong oil on outer Broadway near the greater Portland Christian school.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>I noticed this smell again several times this week. The odor seems stronger this week
+                                than it has been in the past. I cannot be outside.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>Very irritating overwhelming. Occurred on veterans bridge at 9 PM last night next to
+                                Sprague oil tanks.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>Started about an hour ago. Windy day but the smell has been persistent.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>I live in the West End. Many days this summer the odor has been very unpleasant. It feels
+                                toxic.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <blockquote class="blockquote">
+                            <p>Criminal this is still happening all years. Authorities let it go on...and....on.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            <cite>Portland resident</cite>
+                        </figcaption>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#quotes" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#quotes" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+            </div>
+        </div><!-- End Carousel Column -->
+    </div><!-- End Overview Row -->
+
+	<div class="row" id="map"><!-- Map Row -->
 		<div class="col-12 pt-2">
 			<div style="position: relative" class="container bg-light rounded">
 				<div id="observablehq-container"></div>
@@ -210,83 +219,107 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><!-- End Map Row -->
 
-  <div class="row">
-	<div class="col-10"><div id="observablehq-brush" class="pt-2"></div></div>
-	<div class="col-2 d-grid gap-2 p-3">
-		<div id="observablehq-animateBtn"></div>
-		<div id="observablehq-selectAllBtn"></div>
-	</div>
-  </div>
-  
-		<p>The compass allows you to pick the wind direction. 
-		Then the map will update only showing the data from when the wind is going in that direction.</p>
-
-          <h2>What does it smell like?</h2>
-          <p>Throughout thousands of complaints, several descriptions of the local smells are repeated often:
-          "petroleum", "tar", "oil", "asphalt", "sulfur", "gas". Hundreds of the complaints also mention feeling nausea,
-          throat irritation, and headaches.</p>
-          <img src="images/complaint_words.png" />
-          <h2>Where and when do the smells occur?</h2>
-          <p>The smells are reported most frequently along South Portland's northern coastline and throughout Portland's
-          West End. There is a strong seasonal component to the complaints, which increase in the summer with higher
-          temperatures.</p>
-          <img src="images/scatter_temp_vs_complaints.png" width="500px" />
-          <p>The smells appear to correlate strongly with wind direction in some places. Inside Portland's West End,
-          odor complaints are much likelier on days the wind is blowing from the south - i.e., the direction of South
-          Portland's oil storage tanks. See the histogram below, which displays the number of complaints
-          in the West End when the wind is blowing from each direction.</p>
-		<img src="images/wc_hist_west_end.png" width="500px" />
-	
-	<div id="analysis" class="row align-items-md-stretch pt-3">
-      <div class="col-md-12">
-        <div class="p-5 bg-light border rounded-3">
-          <h1 class="display-5 fw-bold">Analysis</h1>
-          <p>This space is reserved for further commentary pending conversation with the stakeholders.</p>
-        </div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-
-    <div id="acknowledgements" class="row align-items-md-stretch pt-3">
-      <div class="col-md-12">
-        <div class="p-5 mb-6 bg-light border rounded-3">
-          <p class="fw-bold fs-4">Acknowledgements</p>
-          <p>Developed by data science students at The Roux Institute, Northeastern University.</p>
-          <p>Thank you to the Greater Portland Council of Governments (GPCOG) for the interesting project.</p>
-        </div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-	
-	
-	<div class="row align-items-md-stretch pt-3 pb-5">
-		<div class="col-md-12">
-			<div class="p-5 mb-6 bg-light border rounded-3">
-				<div class="row">
-					<h1>Smell something? Say something!</h1>
-				</div>
-				<div class="row">
-					<div class="col-6">
-						<p>Contribute your own smell reports to the map using the SmellMyCity app.
-							Go to <a href="https://smellmycity.org" target="_blank">SmellMyCity</a> on your computer, or
-							if you're on your phone,
-							click the link below to download the app or iOS or Android now!</p>
-					</div>
-					<div class="col">
-						<a role="button" class="btn btn-primary btn-lg" target="_blank"
-								href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US">
-							Get the Android App <i class="fa-brands fa-google-play"></i></a>
-					</div>
-					<div class="col">
-						<a role="button" class="btn btn-primary btn-lg" target="_blank"
-								href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8">
-							Get the iOS App <i class="fa-brands fa-app-store-ios"></i></a>
-					</div>
-				</div>
-			</div>
+	<div class="row"><!-- Brush and Buttons Row -->
+		<div class="col-10"><div id="observablehq-brush" class="pt-2"></div></div>
+		<div class="col-2 d-grid gap-2 p-3">
+			<div id="observablehq-animateBtn"></div>
+			<div id="observablehq-selectAllBtn"></div>
 		</div>
-	</div>
-  </div>
+	</div><!-- End Brush and Buttons Row -->
+
+    <div class="row p-3"> <!-- Chart Help Row -->
+        <div class="col-md-8 offset-md-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fa-regular fa-circle-question"></i> Using the Wind Direction Compas</h5>
+                    <p class="card-text">The compass allows you to pick the wind direction. Then the map will update
+                        only showing the data from when the wind is going in that direction.</p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Chart Help Row -->
+
+    <div class="row pt-1 pb-2"><!-- What does it smell like Row -->
+        <div class="col">
+            <h2>What does it smell like?</h2>
+            <p>Throughout thousands of complaints, several descriptions of the local smells are repeated often:
+                "petroleum", "tar", "oil", "asphalt", "sulfur", "gas". Hundreds of the complaints also mention feeling
+                nausea, throat irritation, and headaches.</p>
+            <div id="wordFrequencyChart"></div>
+        </div>
+    </div><!-- End What does it smell like Row -->
+
+    <div class="row pt-1 pb-2"><!-- Temperature correlation Row -->
+        <div class="col">
+            <h2>Does it smell worse when it's hot outside?</h2>
+            <p>The smells are reported most frequently along South Portland's northern coastline and throughout
+                Portland's West End. There is a strong seasonal component to the complaints, which increase in the
+                summer with higher temperatures.</p>
+            <div id="tempAndComplaintsScatter"></div>
+        </div>
+    </div><!-- End Temperature correlation Row -->
+
+    <div class="row pt-1 pb-2"><!-- Wind correlation Row -->
+        <div class="col">
+            <h2>Does it smell worse depending on where the wind blows?</h2>
+            <p>The smells appear to correlate strongly with wind direction in some places. Inside Portland's West End,
+                odor complaints are much likelier on days the wind is blowing from the south - i.e., the direction of
+                South Portland's oil storage tanks. See the histogram below, which displays the number of complaints
+                in the West End when the wind is blowing from each direction.</p>
+            <div id="complaintsAndWindDirection"></div>
+        </div>
+    </div><!-- End Wind correlation Row -->
+
+    <div id="analysis" class="row align-items-md-stretch pt-3"><!-- Additional Analysis Row -->
+        <div class="col-md-12">
+            <div class="p-5 bg-light border rounded-3">
+                <h1 class="display-5 fw-bold">Analysis</h1>
+                <p>This space is reserved for further commentary pending conversation with the stakeholders.</p>
+            </div>
+        </div><!-- /.col -->
+    </div><!-- End Additional Analysis Row -->
+
+    <div id="acknowledgements" class="row align-items-md-stretch pt-3"><!-- Acknowledgements Row -->
+        <div class="col-md-12">
+            <div class="p-5 mb-6 bg-light border rounded-3">
+                <p class="fw-bold fs-4">Acknowledgements</p>
+                <p>Developed by data science students at The Roux Institute, Northeastern University.</p>
+                <p>Thank you to the Greater Portland Council of Governments (GPCOG) for the interesting project.</p>
+            </div>
+        </div><!-- /.col -->
+    </div><!-- End Acknowledgements Row -->
+
+    <div class="row align-items-md-stretch pt-3 pb-5"> <!-- Smell something say something row -->
+        <div class="col-md-12">
+            <div class="p-5 mb-6 bg-light border rounded-3">
+                <div class="row">
+                    <h1>Smell something? Say something!</h1>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>Contribute your own smell reports to the map using the SmellMyCity app.
+                            Go to <a href="https://smellmycity.org" target="_blank">SmellMyCity</a> on your computer, or
+                            if you're on your phone,
+                            click the link below to download the app or iOS or Android now!</p>
+                    </div>
+                    <div class="col">
+                        <a role="button" class="btn btn-primary btn-lg" target="_blank"
+                           href="https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US">
+                            Get the Android App <i class="fa-brands fa-google-play"></i></a>
+                    </div>
+                    <div class="col">
+                        <a role="button" class="btn btn-primary btn-lg" target="_blank"
+                           href="https://itunes.apple.com/us/app/smell-mycity/id1299801253?mt=8">
+                            Get the iOS App <i class="fa-brands fa-app-store-ios"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Smell something say something row -->
+</div>
 </body>
 
 <script type="module">
