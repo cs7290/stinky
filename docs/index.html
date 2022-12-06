@@ -123,6 +123,7 @@
 
 	<div class="row" id="map"><!-- Map Row -->
 		<div class="col-12 pt-2">
+            <div id="observablehq-loading"></div><!-- Loading Indicator -->
 			<div style="position: relative" class="container bg-light rounded">
 				<div id="observablehq-container"></div>
 				<div style="position: absolute; bottom: 0px; right: 0px" class='col-2 bg-light bg-opacity-50 rounded'>
@@ -376,7 +377,7 @@
 
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1375.js?v=3";
+    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1396.js?v=3";
     const renders = {
         "container": "#observablehq-container",
         "compass": "#observablehq-compass",
@@ -385,7 +386,8 @@
         "animateBtn": "#observablehq-animateBtn",
         "whatSmellChart": "#observable-wordFrequencyChart",
         "flyToHtmlSelect": "#observablehq-flyToHtmlSelect",
-        "testSmellBtn": "#observablehq-smellBtn1"
+        "testSmellBtn": "#observablehq-smellBtn1",
+        "loading": "#observablehq-loading"
     };
     const runtime = new Runtime();
     const main = runtime.module(notebook, name => {
