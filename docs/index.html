@@ -129,6 +129,7 @@
 					<p class="text-md-center">Wind Direction</p>
 					<div id="observablehq-compass"></div>
 				</div>
+                <div class="col-12 p-5 rounded" id="observablehq-loading" style="position: absolute; left: 0px; top: 0px; height: 100%; width: 100%"></div><!-- Loading Indicator -->
 			</div>
 		</div>
 	</div><!-- End Map Row -->
@@ -376,7 +377,7 @@
 
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1375.js?v=3";
+    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1396.js?v=3";
     const renders = {
         "container": "#observablehq-container",
         "compass": "#observablehq-compass",
@@ -385,7 +386,8 @@
         "animateBtn": "#observablehq-animateBtn",
         "whatSmellChart": "#observable-wordFrequencyChart",
         "flyToHtmlSelect": "#observablehq-flyToHtmlSelect",
-        "testSmellBtn": "#observablehq-smellBtn1"
+        "testSmellBtn": "#observablehq-smellBtn1",
+        "loading": "#observablehq-loading"
     };
     const runtime = new Runtime();
     const main = runtime.module(notebook, name => {
