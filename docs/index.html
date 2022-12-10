@@ -78,21 +78,14 @@
     <!-- </div> -->
     <!-- End Intro Row -->
 
-    <div class="row justify-content-start" id="story-buttons-filter">
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-filterBtn1"></div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-filterBtn2"></div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-filterBtn3"></div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-filterBtn4"></div>
-        </div>
+    <!--Points of Interest Toggles-->
+    <div class="row">
+        <h4>Points of Interest</h4>
+        <div id="layer-filters"></div>
     </div>
+    <!--End Points of Interest Toggles-->
 
+    <!--Smell Toggles-->
     <div class="row justify-content-start m-3" id="story-buttons-smell">
         <div class="col-sm-6 col-md-3">
             <div id="observablehq-smellBtn1"></div>
@@ -107,12 +100,13 @@
             <div id="observablehq-smellBtn4"></div>
         </div>
     </div>
+    <!--End Smell Toggles-->
 
     <div class="row justify-content-start" id="flyTo">
-        <h6>Zoom Map To: </h6>
+        <!-- <h6>Zoom Map To: </h6>
         <div class="col-4">
             <div id="observablehq-flyToHtmlSelect"></div>
-        </div>
+        </div> -->
         <div class="col-4">
             <div id="observablehq-animateBtn"></div>
         </div>
@@ -377,7 +371,7 @@
 
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1396.js?v=3";
+    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1448.js?v=3";
     const renders = {
         "container": "#observablehq-container",
         "compass": "#observablehq-compass",
@@ -385,9 +379,9 @@
         "selectAllBtn": "#observablehq-selectAllBtn",
         "animateBtn": "#observablehq-animateBtn",
         "whatSmellChart": "#observable-wordFrequencyChart",
-        "flyToHtmlSelect": "#observablehq-flyToHtmlSelect",
         "testSmellBtn": "#observablehq-smellBtn1",
-        "loading": "#observablehq-loading"
+        "loading": "#observablehq-loading",
+        "viewof mapLayers": "#layer-filters"
     };
     const runtime = new Runtime();
     const main = runtime.module(notebook, name => {
