@@ -125,11 +125,6 @@
 		<div class="col-12 pt-2">
 			<div style="position: relative" class="container bg-light rounded">
 				<div id="observablehq-container"></div>
-				<div style="position: absolute; bottom: 0px; right: 0px" class='col-2 bg-light bg-opacity-50 rounded'>
-					<p class="text-md-center">Wind Direction</p>
-					<div id="observablehq-compass"></div>
-				</div>
-                <div class="col-12 p-5 rounded" id="observablehq-loading" style="position: absolute; left: 0px; top: 0px; height: 100%; width: 100%"></div><!-- Loading Indicator -->
 			</div>
 		</div>
 	</div><!-- End Map Row -->
@@ -377,10 +372,9 @@
 
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1396.js?v=3";
+    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1471.js?v=3";
     const renders = {
         "container": "#observablehq-container",
-        "compass": "#observablehq-compass",
         "brush": "#observablehq-brush",
         "selectAllBtn": "#observablehq-selectAllBtn",
         "animateBtn": "#observablehq-animateBtn",
