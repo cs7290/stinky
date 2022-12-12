@@ -10,3 +10,9 @@
 div.row {
     scroll-margin-top: $nav-link-height+$spacer;
 }
+
+label.layer-label {
+    font-size: 1.3em;
+    align-items: inherit !important;
+    margin-right: 30px !important;
+}
