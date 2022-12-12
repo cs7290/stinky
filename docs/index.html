@@ -264,7 +264,7 @@
             <h2>What does it smell like?</h2>
             <p>When users report a smell, they are given the option of providing a description for what the smell they
             are reporting. In order to get a better idea of what kinds of stinks are plaguing the residents of Portland,
-            we counted the number of times people mentioned specific words in their descriptions, and then categorized
+            we counted the number of times people used specific words in their descriptions, and then categorized
             them into six groups.</p>
             <div id="observable-wordFrequencyGroupChart"></div>
             <p>The cart above shows a clear trend regarding smell reports: <b>the vast majority of smells that motivate
@@ -273,13 +273,24 @@
     </div><!-- End What does it smell like Row -->
     <div class="row mt-3 mb-3"><!-- How did we calculate what does it smell like -->
         <div class="col">
-            <h3>How were smell types calculated?</h3>
-            <p>Below, we provide a chart of un-grouped terms used in descriptions which were used at least fifty times.
-                Throughout thousands of complaints, several descriptions of the local smells are repeated often:
-                "petroleum", "tar", "oil", "asphalt", "sulfur", "gasoline". Complaints also mention feeling
-                nausea, throat irritation, and headaches. These terms were categorized by where they most likely
-                originated except for terms that only related to safety ("carcinogen", "nausea", etc.).</p>
+            <h4>How were smell types calculated?</h4>
+            <p>To categorize what types of smells people reported, we counted the words used in each smell report
+            description. First, each description was split into the descriptions component words. Then, words unrelated
+            to smell descriptions, such as "always", "very", and "ruining", were removed. Next, a list of synonyms were
+            used to remove spelling errors, differences in tense and plurality, and regional and cultural differences.
+            For example: "sewer" was replaced with "sewage", "gassy" was replaced with "gas", "pavement" with "asphalt",
+            and "eggs" with "sulfur".</p>
+            <p>At this point, we have the un-grouped terms used in each description. When we count these terms, we can
+            create the chart below, which shows terms used in descriptions which were counted at least fifty times.
+            Several descriptions of the local smells are repeated often: "petroleum", "tar", "oil", "asphalt", "sulfur",
+            "gasoline". Complaints also mention feeling nausea, throat irritation, and headaches.</p>
             <div id="observable-wordFrequencyChart"></div>
+            <p>These terms were categorized by where they most likely originated, except for terms that only related to
+            safety ("carcinogen", "nausea", etc.). For example: "oil", "gas", and "propage" were all categorized as
+            "petrochemical"; "rubber", "asphalt", and "tires" were mapped to "transportation"; and "carcinogen",
+            "electrical", and "bitter" were mapped to "unknown, dangerous".</p>
+            <p>To see exactly how these charts were created see this
+            <a href="https://observablehq.com/d/bc17b13892793ae0">observable notebook</a>.</p>
         </div>
     </div><!-- End How did we calculate what does it smell like row-->
 
