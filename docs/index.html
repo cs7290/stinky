@@ -262,13 +262,26 @@
     <div class="row mt-3 mb-3">
         <div class="col">
             <h2>What does it smell like?</h2>
-            <p>Throughout thousands of complaints, several descriptions of the local smells are repeated often:
-                "petroleum", "tar", "oil", "asphalt", "sulfur", "gas". Hundreds of the complaints also mention feeling
-                nausea, throat irritation, and headaches.</p>
+            <p>When users report a smell, they are given the option of providing a description for what the smell they
+            are reporting. In order to get a better idea of what kinds of stinks are plaguing the residents of Portland,
+            we counted the number of times people mentioned specific words in their descriptions, and then categorized
+            them into six groups.</p>
+            <div id="observable-wordFrequencyGroupChart"></div>
+            <p>The cart above shows a clear trend regarding smell reports: <b>the vast majority of smells that motivate
+                people to file a report originate from the petrochemical industry.</b></p>
+        </div>
+    </div><!-- End What does it smell like Row -->
+    <div class="row mt-3 mb-3"><!-- How did we calculate what does it smell like -->
+        <div class="col">
+            <h3>How were smell types calculated?</h3>
+            <p>Below, we provide a chart of un-grouped terms used in descriptions which were used at least fifty times.
+                Throughout thousands of complaints, several descriptions of the local smells are repeated often:
+                "petroleum", "tar", "oil", "asphalt", "sulfur", "gasoline". Complaints also mention feeling
+                nausea, throat irritation, and headaches. These terms were categorized by where they most likely
+                originated except for terms that only related to safety ("carcinogen", "nausea", etc.).</p>
             <div id="observable-wordFrequencyChart"></div>
         </div>
-    </div>
-    <!-- End What does it smell like Row -->
+    </div><!-- End How did we calculate what does it smell like row-->
 
     <!-- Temperature correlation Row -->
     <div class="row">
@@ -281,19 +294,6 @@
         </div>
     </div>
     <!-- End Temperature correlation Row -->
-
-    <!-- Wind correlation Row -->
-    <div class="row">
-        <div class="col">
-            <h2>Does it smell worse depending on where the wind blows?</h2>
-            <p>The smells appear to correlate strongly with wind direction in some places. Inside Portland's West End,
-                odor complaints are much likelier on days the wind is blowing from the south - i.e., the direction of
-                South Portland's oil storage tanks. See the histogram below, which displays the number of complaints
-                in the West End when the wind is blowing from each direction.</p>
-            <div id="complaintsAndWindDirection"></div>
-        </div>
-    </div>
-    <!-- End Wind correlation Row -->
 
     <!-- Additional Analysis Row -->
     <!-- <div id="analysis" class="row align-items-md-stretch pt-3">
@@ -337,7 +337,7 @@
         <div class="col-md-12">
             <div class="p-3 bg-light border rounded-3">
                 <div class="row">
-                    <h4>Smell something? Say something!</h1>
+                    <h4>Smell something? Say something!</h4>
                 </div>
                 <div class="row">
                     <div class="col-6">
@@ -372,6 +372,7 @@
         "brush": "#observablehq-brush",
         "selectAllBtn": "#observablehq-selectAllBtn",
         "animateBtn": "#observablehq-animateBtn",
+        "whatSmellGroupedChart": "#observable-wordFrequencyGroupChart",
         "whatSmellChart": "#observable-wordFrequencyChart",
         "testSmellBtn": "#observablehq-smellBtn1",
         "loading": "#observablehq-loading",
