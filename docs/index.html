@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#analysis">Analysis</a>
                 </li>
             </ul>
-                <h4 class="navbar-text">Report an Odor in the SmellMyCity App:</h4>
+                <span class="navbar-text">Report an Odor in the SmellMyCity App:</span>
                 <a class="navbar-brand" href='https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US'
                     target="_blank"><img alt='Get it on Google Play'
                         src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="60" /></a>
@@ -44,9 +44,10 @@
     <div class="row pt-3">
         <div class="col">
             <div class="p-5 bg-light rounded-3 border">
-                <h1 class="display-5 fw-bold">Noticed an industrial odor near South Portland?</h1>
-                <p class="fs-4">South Portland and Portland have been tracking these smell complaints since 2019. If
-                    you've been smelling something, you're not alone.
+                <h1 class="display-5 fw-bold">Air Quality Reports in South Portland</h1>
+                <p class="fs-4">Since 2020, South Portland-area residents have collected over 7,000 reports of unpleasant odors through
+                    the <a href="https://smellpittsburgh.org/">SmellMyCity</a> app. Explore the results using the map and charts
+                    below.
                 </p></div>
         </div>
         <!-- end .col -->
@@ -77,19 +78,6 @@
     </div>
     <!--End Smell Toggles-->
 
-    <div class="row justify-content-start" id="flyTo">
-        <!-- <h6>Zoom Map To: </h6>
-        <div class="col-4">
-            <div id="observablehq-flyToHtmlSelect"></div>
-        </div> -->
-        <div class="col-4">
-            <div id="observablehq-animateBtn"></div>
-        </div>
-        <div class="col-4">
-            <div id="observablehq-selectAllBtn"></div>
-        </div>
-    </div>
-
 	<div class="row" id="map"><!-- Map Row -->
 		<div class="col-12 pt-2">
 			<div style="position: relative" class="container bg-light rounded">
@@ -103,13 +91,37 @@
 	</div><!-- End Brush and Buttons Row -->
 
     <div class="row p-3"> <!-- Chart Help Row -->
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
-                    <h5 class="card-title">
-                        <i class="fa-regular fa-circle-question"></i> Using the Wind Direction Compas</h5>
-                    <p class="card-text">The compass allows you to pick the wind direction. Then the map will update
-                        only showing the data from when the wind is going in that direction.</p>
+                    <h5 class="card-title">Filter by Date</h5>
+                    <p class="card-text">The histogram chart above shows how the number of reports changes over time. Drag the
+                        gray box to highlight a specific time period.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Filter by Wind Direction</h5>
+                    <p class="card-text">The compass in the bottom right corner allows you to show only reports that were
+                        submitted when wind was coming
+                        from a given
+                        direction.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row pt-2">
+                            <div id="observablehq-animateBtn"></div>
+                        </div>
+                        <div class="row pt-2">
+                            <div id="observablehq-selectAllBtn"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,7 +342,7 @@
                             if you're on your phone,
                             click the link below to download the app or iOS or Android now!</p>
                     </div>
-                    <div class="col-sm-4 text-center">
+                    <div class="col-sm-4 text-center align-middle">
                         <a class="navbar-brand" href='https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US'
                             target="_blank"><img alt='Get it on Google Play'
                                 src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
