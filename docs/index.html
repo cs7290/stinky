@@ -13,12 +13,14 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#map">Map</a>
                 </li>
@@ -55,14 +57,14 @@
     <!-- End Intro Row -->
 
     <!--Points of Interest Toggles-->
-    <div class="row">
-        <h4>Points of Interest</h4>
-        <div id="layer-filters"></div>
+    <div class="row mb-2">
+        <h4 class="fw-lighter">Points of Interest</h4>
+        <div class="fw-lighter" id="layer-filters"></div>
     </div>
     <!--End Points of Interest Toggles-->
 
     <!--Smell Toggles-->
-    <div class="row justify-content-start m-3" id="story-buttons-smell">
+    <div class="row justify-content-start" id="story-buttons-smell">
         <div class="col-sm-6 col-md-3">
             <div id="observablehq-smellBtn1"></div>
         </div>
@@ -246,7 +248,7 @@
     </div><!-- End Carousel Column -->
 
     <!-- What does it smell like Row -->
-    <div class="row mt-3 mb-3">
+    <div id="analysis" class="row mt-3 mb-3">
         <div class="col">
             <h2>What does it smell like?</h2>
             <p>When users report a smell, they are given the option of providing a description for what the smell they
@@ -293,54 +295,29 @@
     </div>
     <!-- End when does it smell Row -->
 
-    <!-- Additional Analysis Row -->
-    <!-- <div id="analysis" class="row align-items-md-stretch pt-3">
-        <div class="col-md-12">
-            <div class="p-5 bg-light border rounded-3">
-                <h1 class="display-5 fw-bold">Analysis</h1>
-                <p>This space is reserved for further commentary pending conversation with the stakeholders.</p>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Additional Analysis Row -->
-
-    <!-- Overview Row -->
-    <!-- <div class="row p-5">
-        <div class="col-sm">
-            <h2>Strong Industrial Odors</h2>
-            <p>Residents in South Portland and Portland have often described strong neighborhood odors for years. These
-                smells were frequently described as industrial in nature; given the large oil storage tanks nearby,
-                local and state governments have been working to gauge the severity of the problem.</p>
-            <p>These cities have tracked thousands online smell complaints for this issue, logging the date, location,
-                odor descriptions, and personal symptoms. You can visually explore this data for yourself below.</p>
-        </div>
-        
-    </div> -->
-    <!-- End Overview Row -->
+    <hr>
 
     <!-- Acknowledgements Row -->
-    <div id="acknowledgements" class="row align-items-md-stretch pt-3">
-        <div class="col-md-12">
-            <div class="p-3 bg-light border rounded-3">
-                <h4>Acknowledgements</h4>
-                <p>Developed by data science students at The Roux Institute, Northeastern University.
-                    Thank you to the Greater Portland Council of Governments (GPCOG) for the interesting project.</p>
-            </div>
+    <div id="acknowledgements" class="row">
+        <div class="col">
+            <h3>Acknowledgements</h3>
+            <p>Stinky is a joint project of data science and computer science students at the Roux Institute, Northeastern University, Portland, Maine.
+                Thank you to the Greater Portland Council of Governments (GPCOG) for the interesting project.</p>
         </div>
     </div>
     <!-- End Acknowledgements Row -->
 
     <!-- Smell something say something row -->
-    <div class="row align-items-md-stretch pt-3 pb-5">
+    <div id="report" class="row align-items-md-stretch pt-3 mb-5">
         <div class="col-md-12">
-            <div class="p-3 bg-light border rounded-3">
+            <div class="pt-3 ps-3 pe-3 pb-1 bg-light border rounded-3">
                 <div class="row">
                     <div class="col-sm-8">
                         <h4>Smell something? Say something!</h4>
                         <p>Contribute your own smell reports to the map using the SmellMyCity app.
                             Go to <a href="https://smellmycity.org" target="_blank">SmellMyCity</a> on your computer, or
                             if you're on your phone,
-                            click the link below to download the app or iOS or Android now!</p>
+                            click the link below to download the app on iOS or Android now!</p>
                     </div>
                     <div class="col-sm-4 text-center align-middle">
                         <a class="navbar-brand" href='https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US'
@@ -356,6 +333,7 @@
         </div>
     </div>
     <!-- End Smell something say something row -->
+    
 </div>
 </body>
 
