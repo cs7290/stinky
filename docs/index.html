@@ -56,30 +56,6 @@
     </div>
     <!-- End Intro Row -->
 
-    <!--Points of Interest Toggles-->
-    <div class="row mb-2">
-        <h4 class="fw-lighter">Points of Interest</h4>
-        <div class="fw-lighter" id="layer-filters"></div>
-    </div>
-    <!--End Points of Interest Toggles-->
-
-    <!--Smell Toggles-->
-    <div class="row justify-content-start" id="story-buttons-smell">
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-smellBtn1"></div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-smellBtn2"></div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-smellBtn3"></div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div id="observablehq-smellBtn4"></div>
-        </div>
-    </div>
-    <!--End Smell Toggles-->
-
 	<div class="row" id="map"><!-- Map Row -->
 		<div class="col-12 pt-2">
 			<div style="position: relative" class="container bg-light rounded">
@@ -116,14 +92,15 @@
         <div class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
-                    <div class="container-fluid">
                         <div class="row pt-2">
                             <div id="observablehq-animateBtn"></div>
                         </div>
                         <div class="row pt-2">
                             <div id="observablehq-selectAllBtn"></div>
                         </div>
-                    </div>
+                        <div class="row pt-2">
+                            <div id="observablehq-resetBtn"></div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -339,18 +316,18 @@
 
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import notebook from "https://api.observablehq.com/d/e5057433bd482160@1524.js?v=3";
+        import notebook from "https://api.observablehq.com/d/e5057433bd482160.js?v=3";
     const renders = {
         "container": "#observablehq-container",
         "brush": "#observablehq-brush",
         "selectAllBtn": "#observablehq-selectAllBtn",
         "animateBtn": "#observablehq-animateBtn",
+        "resetBtn": "#observablehq-resetBtn",
         "whatSmellGroupedChart": "#observable-wordFrequencyGroupChart",
         "whatSmellChart": "#observable-wordFrequencyChart",
         "whenChart": "#observable-whenChart",
         "testSmellBtn": "#observablehq-smellBtn1",
-        "loading": "#observablehq-loading",
-        "viewof mapLayers": "#layer-filters"
+        "loading": "#observablehq-loading"
     };
     const runtime = new Runtime();
     const main = runtime.module(notebook, name => {
