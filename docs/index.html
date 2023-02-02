@@ -27,15 +27,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#analysis">Analysis</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+                </li>
             </ul>
+            <div class="flex-wrap align-items-center">
                 <span class="navbar-text">Report an Odor in the SmellMyCity App:</span>
                 <a class="navbar-brand" href='https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US'
-                    target="_blank"><img alt='Get it on Google Play'
-                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="60" /></a>
+                    target="_blank"><img id="navbar-gplay" alt='Get it on Google Play'
+                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
                 <a class="navbar-brand" href='https://apps.apple.com/us/app/smell-mycity/id1299801253' target="_blank"><img
+                        id="navbar-apple"
                         alt='Download on the App Store'
-                        src='https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg' height="40" /></a>
-                    <a class="nav-link fa-brands fa-github fs-3" href="https://github.com/cs7290/stinky"
+                        src='https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg' /></a>
+                    </div>
+                    <a class="navbar-brand fa-brands fa-github fs-3" href="https://github.com/cs7290/stinky"
                        target="_blank"></a>
         </div><!-- /.collapsible navbar -->
     </div><!-- /.container -->
@@ -278,8 +284,15 @@
     <div id="acknowledgements" class="row">
         <div class="col">
             <h3>Acknowledgements</h3>
-            <p>Stinky is a joint project of data science and computer science students at the Roux Institute, Northeastern University, Portland, Maine.
-                Thank you to the Greater Portland Council of Governments (GPCOG) for the interesting project.</p>
+            <p>This project was initiated by the <a href="https://gpcog.org/" target="_blank">Greater Portland Council of
+                    Governments (GPCOG)</a> in collaboration with Prof. Philip
+                Bogden at The Roux Institute at Northeastern University.</p>
+            <p>This website was developed by <a href="https://github.com/PhilipMathieu" target="_blank">Philip Mathieu</a>,
+                Alexander Berger,
+                Nathaniel Webb, and Lukas Hernandez during the Fall 2022 section of CS7290. It builds on work from the <a
+                    href="https://github.com/ds5110/stinky" target="_blank">Fall 2021</a> and <a
+                    href="https://github.com/ds5110/stinky2" target="_blank">Spring
+                    2022</a> sections of DS5110.</p>
         </div>
     </div>
     <!-- End Acknowledgements Row -->
@@ -296,7 +309,7 @@
                             if you're on your phone,
                             click the link below to download the app on iOS or Android now!</p>
                     </div>
-                    <div class="col-sm-4 text-center align-middle">
+                    <div class="col-sm-4 text-center">
                         <a class="navbar-brand" href='https://play.google.com/store/apps/details?id=org.cmucreatelab.smellmycity&hl=en_US'
                             target="_blank"><img alt='Get it on Google Play'
                                 src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
@@ -316,7 +329,7 @@
 
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                import notebook from "https://api.observablehq.com/d/e5057433bd482160@1600.js?v=3";
+        import notebook from "https://api.observablehq.com/d/e5057433bd482160@1600.js?v=3";
     const renders = {
         "container": "#observablehq-container",
         "brush": "#observablehq-brush",
