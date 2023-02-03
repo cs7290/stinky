@@ -8,9 +8,16 @@
 // Then add additional custom code here
 
 div.row {
-    scroll-margin-top: $nav-link-height+$spacer;
+    scroll-margin-top: $nav-link-height + $spacer;
 }
 
+img#navbar-gplay {
+    height: $nav-link-height;
+}
+
+img#navbar-apple {
+    height: calc(2 / 3)*$nav-link-height;
+}
 label.layer-label {
     font-size: 1.3em;
     align-items: inherit !important;

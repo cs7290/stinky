@@ -10775,6 +10775,14 @@ div.row {
   scroll-margin-top: 3.5rem;
 }
 
+img#navbar-gplay {
+  height: 2.5rem;
+}
+
+img#navbar-apple {
+  height: 1.6666666667rem;
+}
+
 label.layer-label {
   font-size: 1.3em;
   align-items: inherit !important;
