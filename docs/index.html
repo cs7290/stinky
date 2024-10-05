@@ -28,6 +28,9 @@
                     <a class="nav-link" href="#analysis">Analysis</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#methodology">Methodology</a>
+                    </li>
+                    <li class="nav-item">
                     <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
                 </li>
             </ul>
@@ -265,6 +268,33 @@
             <a href="https://observablehq.com/d/bc17b13892793ae0">observable notebook</a>.</p>
         </div>
     </div><!-- End How did we calculate what does it smell like row-->
+
+    <!-- Methodology -->
+    <div id="methodology" class="row mt-3 mb-3">
+        <div class="col">
+            <h2>Methodology</h2>
+            <p>The data used in this visualization is obtained through an API call. Since this is a public API, SmellMyCity
+                has taken certain precautions to protect personal information which could impact the reliability of the
+                data. In particular:
+            <ul>
+                <li>Each submission is treated as a unique data point; we cannot identify multiple submissions from the same
+                    user.</li>
+                <li>Location data are skewed within a short radius to protect actual locations.</li>
+                <li>The data are contributed by users and must be treated similarly to public-facing surveys, as opposed to
+                    purely objective measures.</li>
+            </ul>
+            </p>
+            <p>
+                Prevailing wind direction is obtained separately from a NOAA database. The direction associated with each
+                data point is the prevailing direction on the day of the report, but may not represent wind conditions at
+                the particular moment the report was submitted.
+            </p>
+            <p>
+                Finally, the text analysis presented above required many design choices from the researchers, including
+                determining the categories in which to group comments and developing a list of synonyms.
+            </p>
+        </div>
+    </div><!-- End Methodology Row -->
 
     <!-- When does it smell Row -->
     <div class="row">
